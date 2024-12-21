@@ -1,23 +1,33 @@
-import 'package:demoproject/homepage.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
-    );
+    return Scaffold(
+        appBar: AppBar(
+            title: const Text("CPSU Project",
+                style: TextStyle(
+                    color: Colors.white, fontSize: 28, letterSpacing: 2)),
+            backgroundColor: Colors.redAccent,
+            centerTitle: true),
+        backgroundColor: Colors.white60,
+        body: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                  padding: const EdgeInsets.all(15),
+                  color: Colors.blueAccent,
+                  child: const Text("Hello World1")),
+              Container(
+                  padding: const EdgeInsets.all(15),
+                  color: Colors.blueAccent,
+                  child: const Text("Hello World2")),
+              Container(
+                  padding: const EdgeInsets.all(15),
+                  color: Colors.blueAccent,
+                  child: const Text("Hello World3")),
+            ]));
   }
 }
